@@ -42,7 +42,7 @@
 
     let posts = []
 
-    axios.get('https://reddit.com/r/aww.json')
+    axios.get('https://reddit.com/r/aww.json?raw_json=1')
       .then(response => {
         posts = response.data.data.children
         this.renderPosts(posts)
